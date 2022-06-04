@@ -13,7 +13,7 @@
     
     <nav>
         <div class="navbar">
-        <a class="nav-link" href="index.php">Home</a>
+        <a class="nav-link" href="{{url_for('home')}}">Home</a>
         <div class="coaching-more">
             <button class="coaching-more-btn nav-link">Coaching 
             </button>
@@ -25,23 +25,12 @@
             </div>
         </div> 
     
-        <div class="nav-logo"><a href="index.php"><img src="images/logo-solo.svg"></a></div>
+        <div class="nav-logo"><a href="index.php"><img src="static/images/logo-solo.svg"></a></div>
     
         <div class="clients-more">
             <button class="clients-more-btn nav-link">Clients 
             </button>
             <div class="clients-more-content">
-                <?php
-                    if (isset($_SESSION["clientUid"])) {
-                        echo '<a href="profile.php">Profile</a>';
-                        echo '<a href="include/logout.inc.php">Log out</a>';
-                    }
-    
-                    else {
-                        echo "<a href='sign-up.php'>Sign Up</a>";
-                        echo "<a href='login.php'>Log in</a>";
-                    }
-                ?>
             <a href="workout-tracker.php">Workout Tracker</a>
             <a href="previous-workouts.php">Previous Workouts</a>
             <a href="client-plan.php">Client Plan</a>
@@ -54,7 +43,7 @@
     </nav>
     
     
-    <h1><div id="logo"><img src="images/logo (invert).svg"></div></h1>
+    <h1><div id="logo"><img src="static/images/logo (invert).svg"></div></h1>
     
     <div class="socials">
     
@@ -62,6 +51,10 @@
     <a href=""><i class="fa-brands fa-facebook-square"></i></a>
     
     </div>
+
+    {% block content %}
+
+    {% endblock %}
 
 </body>
 </html>
