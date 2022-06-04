@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+
+    <title>Hunt For Habit</title>
+</head>
+<body>
+    
+    <nav>
+        <div class="navbar">
+        <a class="nav-link" href="index.php">Home</a>
+        <div class="coaching-more">
+            <button class="coaching-more-btn nav-link">Coaching 
+            </button>
+            <div class="coaching-more-content">
+            <a href="free-consultation.php">Free Consultation</a>
+            <a href="online-coaching.php">Online Coaching</a>
+            <a href="testimonials.php">Testimonials</a>
+            <a href="calorie-calculator.php">Calorie Calculator</a>
+            </div>
+        </div> 
+    
+        <div class="nav-logo"><a href="index.php"><img src="images/logo-solo.svg"></a></div>
+    
+        <div class="clients-more">
+            <button class="clients-more-btn nav-link">Clients 
+            </button>
+            <div class="clients-more-content">
+                <?php
+                    if (isset($_SESSION["clientUid"])) {
+                        echo '<a href="profile.php">Profile</a>';
+                        echo '<a href="include/logout.inc.php">Log out</a>';
+                    }
+    
+                    else {
+                        echo "<a href='sign-up.php'>Sign Up</a>";
+                        echo "<a href='login.php'>Log in</a>";
+                    }
+                ?>
+            <a href="workout-tracker.php">Workout Tracker</a>
+            <a href="previous-workouts.php">Previous Workouts</a>
+            <a href="client-plan.php">Client Plan</a>
+            <a href="admin.php">Admin</a>
+            </div>
+        </div> 
+        <a class="nav-link" href="faqs.php">FAQs</a>
+    
+        </div>
+    </nav>
+    
+    
+    <h1><div id="logo"><img src="images/logo (invert).svg"></div></h1>
+    
+    <div class="socials">
+    
+    <a href=""><i class="fa-brands fa-instagram-square"></i></a>
+    <a href=""><i class="fa-brands fa-facebook-square"></i></a>
+    
+    </div>
+
+</body>
+</html>
