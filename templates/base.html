@@ -18,10 +18,10 @@
             <button class="coaching-more-btn nav-link">Coaching 
             </button>
             <div class="coaching-more-content">
-            <a href="free-consultation.php">Free Consultation</a>
-            <a href="online-coaching.php">Online Coaching</a>
-            <a href="testimonials.php">Testimonials</a>
-            <a href="calorie-calculator.php">Calorie Calculator</a>
+            <a href="{{url_for('free_consultation')}}">Free Consultation</a>
+            <a href="{{url_for('online_coaching')}}">Online Coaching</a>
+            <a href="{{url_for('testimonials')}}">Testimonials</a>
+            <a href="{{url_for('calorie_calculator')}}">Calorie Calculator</a>
             </div>
         </div> 
     
@@ -31,13 +31,14 @@
             <button class="clients-more-btn nav-link">Clients 
             </button>
             <div class="clients-more-content">
-            <a href="workout-tracker.php">Workout Tracker</a>
-            <a href="previous-workouts.php">Previous Workouts</a>
-            <a href="client-plan.php">Client Plan</a>
-            <a href="admin.php">Admin</a>
+            <a href="{{url_for('sign_up')}}">Sign Up</a>
+            <a href="{{url_for('log_in')}}">Log In</a>
+            <a href="{{url_for('profile')}}">Profile</a>
+            <a href="{{url_for('client_plan')}}">Client Plan</a>
+            <a href="{{url_for('admin')}}">Admin</a>
             </div>
         </div> 
-        <a class="nav-link" href="faqs.php">FAQs</a>
+        <a class="nav-link" href="{{url_for('faq')}}">FAQs</a>
     
         </div>
     </nav>
@@ -55,6 +56,13 @@
     {% block content %}
 
     {% endblock %}
+
+    <div class="footer-div">
+        <footer>
+            <div id="footer-logo"><img src="static/images/logo-solo (invert).svg"></div>
+            &copy; Hunt For Habit, Fitness & Personal Training <?php echo date('Y') ?>
+            </footer>
+    </div>
 
 </body>
 </html>

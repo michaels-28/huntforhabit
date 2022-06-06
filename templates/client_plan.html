@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h2>Client Plan</h2>
+
+    <hr>
+
+    <form class="plan-container" action="exercise-input.php" method="POST">
+
+        <div class="week-title" name="workoutWeek">WEEK 1</div>
+        <div class="day-title" name="workoutDay">DAY 1</div>
+        <div class="workout-title" name="workoutName">SHOULDERS</div>
+        
+        <br>
+        
+        <input class="workout-date" type="date" name="workoutDate">
+        
+        <div class="ex-container">
+
+            <div class="ex-img"></div>
+            
+            <div class="ex-title" name="exerciseName">ARNOLD PRESS</div>
+            
+            <div class="ex-tempo">TEMPO: 2-0-1-0</div>
+            <div class="ex-rpe">RPE: 7-9</div>
+            
+            
+            <div class="filler"></div>
+            <div class="ex-sets" name="repsSet1">15 REPS</div>
+            <div class="ex-sets" name="repsSet2">15 REPS</div>
+            <div class="ex-sets" name="repsSet3">15 REPS</div>
+            <div class="ex-sets" name="repsSet4">15 REPS</div>
+            <div class="ex-sets" name="repsSet5">15 REPS</div>
+            <div class="filler"></div>
+            
+            <div class="ex-weight-title">WEIGHT</div>
+            <input class="ex-weight" type="text" name="weightSet1" placeholder="SET 1">
+            <input class="ex-weight" type="text" name="weightSet2" placeholder="SET 2">
+            <input class="ex-weight" type="text" name="weightSet3" placeholder="SET 3">
+            <input class="ex-weight" type="text" name="weightSet4" placeholder="SET 4">
+            <input class="ex-weight" type="text" name="weightSet5" placeholder="SET 5">
+            <select class="ex-weight-select" name="weightUnit">
+                            <option value="kg" selected>kg</option>
+                            <option value="lb">lb</option>
+                        </select>
+            
+            <div class="ex-rpe-title">RPE</div>
+            <select class="ex-rpe-select" name="rpeSet">
+                            <option value="RPE" disabled selected>(please select)</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>      
+            
+            <div class="filler"></div>
+            
+            <div class="ex-notes-title">NOTES</div>
+            <input class="ex-notes" type="text" name="notes" placeholder="Notes...">
+            
+                   
+            
+            </div>
+        
+        <input class="complete-workout-button" type="submit" name="submit">
+        
+        </form>
+
+ {%endblock%}   
